@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 function Registration() {
+  // this.handleClick = this.handleClick.bind(this);
   const [input, setInput] = useState({
     firstname: "",
     lastname: "",
@@ -11,6 +12,7 @@ function Registration() {
     ZIP: "",
     Country: "",
   });
+
   function handleChange(event) {
     const { name, value } = event.target;
 
@@ -22,11 +24,9 @@ function Registration() {
     });
   }
 
-  function handleSubmit() {
+  function handleClick() {
     // event.preventDefault();
-    alert(
-      `${this.state.firstName} ${this.state.lastName}  Registered Successfully!`
-    );
+    alert(`${input.firstname} ${input.lastname}  Registered Successfully !!!!`);
     console.log("Registered successfully!");
     const newRegistration = {
       firstname: input.firstname,
@@ -124,7 +124,7 @@ function Registration() {
             US
           </div>
         </div>
-        <button onClick={handleSubmit}>Submit</button>
+        <button onClick={handleClick}>Submit</button>
       </form>
     </div>
   );
