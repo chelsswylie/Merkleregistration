@@ -3,6 +3,7 @@ import ReactDataSheet from "react-datasheet";
 // Be sure to include styles at some point, probably during your bootstrapping
 import "react-datasheet/lib/react-datasheet.css";
 import "./Administration.css";
+import Registration from "./Registration";
 
 // function Administration() {
 //   return (
@@ -28,14 +29,15 @@ class Administration extends React.Component {
           { value: "Country" },
         ],
         [
-          { value: "" },
-          { value: "" },
-          { value: "" },
-          { value: "" },
-          { value: "" },
-          { value: "" },
-          { value: "" },
-          { value: "" },
+          { value: this.firstname },
+          { value: this.lastname },
+          { value: this.Address1 },
+          { value: this.Address2 },
+          { value: this.City },
+          { value: this.State },
+          { value: this.ZIP },
+          { value: this.Country },
+          // need to loop through above to get continued results - MongoDB integration will help
         ],
       ],
     };

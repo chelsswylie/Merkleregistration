@@ -110,19 +110,15 @@ function Registration() {
           ></input>
         </div>
         <div className="form-group">
-          <div
-            className="btn btn-secondary dropdown-toggle"
-            href="#"
-            role="button"
-            id="actions"
+          <input
+            value="US"
+            onChange={handleChange}
+            placeholder="Country"
+            name="Country"
+            className="form-group"
             data-toggle="dropdown"
             aria-haspopup="true"
-            aria-expanded="false"
-            value="US"
-            name="country"
-          >
-            US
-          </div>
+          ></input>
         </div>
         <button onClick={handleClick}>Submit</button>
       </form>
